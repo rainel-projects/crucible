@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b;
+  --foreground: #fafafa;
+  --primary: #fafafa;
+  --secondary: #27272a;
+  --accent: #3b82f6;
+}
+
+[data-theme='coding-dojo'] {
+  --background: #050505;
+  --foreground: #e2e8f0;
+  --primary: #3b82f6;
+  --secondary: #0f172a;
+  --accent: #60a5fa;
+  --glow: rgba(59, 130, 246, 0.5);
+}
+
+[data-theme='cyber-lab'] {
+  --background: #020402;
+  --foreground: #e2e8f0;
+  --primary: #4ade80;
+  --secondary: #052e16;
+  --accent: #22c55e;
+  --glow: rgba(74, 222, 128, 0.5);
+}
+
+[data-theme='monk-mode'] {
+  --background: #0c0a09;
+  --foreground: #e7e5e4;
+  --primary: #d4d4d8;
+  /* Zinc 300 for text */
+  --secondary: #1c1917;
+  --accent: #b45309;
+  /* Amber 700 */
+  --highlight: #f59e0b;
+  /* Amber 500 */
+  --glow: rgba(245, 158, 11, 0.3);
+}
+
+body {
+  @apply bg-background text-foreground font-mono antialiased overflow-hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-background;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-secondary rounded-full;
+}
